@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>LiteDrive</title>
+        <link rel="styleSheet" href="style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+        <div id="header">
+            <button id="button">Add Folder</button>
+            <button id="fileButton">Add File</button>
+        </div>
+        
+        <div id="breadcrumb">
+            <a class="path" rid="0">Home</a>
+        </div>
+        <div id="container"></div>
+
+        <div id="overlay"></div>
+        <div id="app">
+            <div id="app-title-bar">
+                <div id="app-title"></div>
+                <div id="win-actions">
+                    <span id="app-close" title="Close" class="material-icons">close</span>
+                </div>
+            </div>
+            <div id="app-menu-bar"></div>
+            <div id="app-body"></div>
+        </div>
+
+        <template id="templates">
+            <div class="newFolder">
+                <span action="edit">Edit</span>
+                <span action="delete">Delete</span>
+                <div purpose="name"></div>
+            </div>
+            <div class="newTextFile">
+                <span action="edit">Edit</span>
+                <span action="delete">Delete</span>
+                <div purpose="name"></div>
+            </div>
+            <a class="path">&nbsp;&nbsp;&nbsp;〉&nbsp;&nbsp;&nbsp;</a>
+            <div class="material-icons" action="backButton">keyboard_backspace</div>
+            <div purpose="notepad-menu" class="notepad-menu">
+                <span action="save" class="material-icons" title="Save File">save</span>
+                <span action="bold" pressed="false" class="material-icons">format_bold</span>
+                <span action="italic" pressed="false" class="material-icons">format_italic</span>
+                <span action="underline" pressed="false" class="material-icons">format_underline</span>
+                <input type="color" title="Background Color" action="bg-color"/>
+                <input type="color" title="Text Color" action="fg-color"/>
+                <select action="font-family">
+                    <option value="Arial">Arial</option>
+                    <option value="monospace">monospace</option>
+                    <option value="serif">serif</option>
+                    <option value="sans-serif">sans-serif</option>
+                    <option value="cursive">cursive</option>
+                </select>
+                <select action="font-size">
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                </select>
+                <span action="download" class="material-icons" title="Download File">download</span>
+                <a purpose="download" href="http://www.google.com" target="_blank">Link</a>
+                <span action="forupload" class="material-icons" title="Upload File">upload</span>
+                <input action="upload" type="file"/>
+            </div>
+            <div purpose="notepad-body" class="notepad-body">
+                <textarea placeholder="Type here.....">this is the body man</textarea>
+            </div>
+        </template>
+
+        <script type="text/javaScript" src="main.js"></script>
+    </body>
+</html>
+
+

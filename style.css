@@ -1,0 +1,272 @@
+#header {
+    justify-content: center;
+    display: flex;
+}
+#button {
+    background-color: rgb(221, 205, 236);
+    border-radius: 10px;
+    width: 150px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    border: 2px solid;
+    margin-right: 10px;
+}
+#fileButton {
+    background-color: rgb(221, 205, 236);
+    border-radius: 10px;
+    width: 150px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    border: 2px solid;
+    margin-left: 10px;
+}
+
+#button:hover{
+    transform: scale(1.02);
+}
+#fileButton:hover{
+    transform: scale(1.02);
+}
+
+div[action=backButton] {
+    padding-right: 6px;
+    margin-top: 2px;
+    margin-right: 13px;
+    color: floralwhite;
+    border-right: 2px solid black;
+    float: left;
+    font-size: 17px;
+}
+
+div[action=backButton]:hover{
+    color: black;
+    cursor: pointer;
+}
+
+#container {
+    border: 1px solid;
+    margin-top:8px;
+    padding: 5px;
+    display: flex;
+    height: 633px;
+    overflow: auto;
+    border-radius: 8px;
+    background-color: #f4f0f8;
+}
+
+#breadcrumb {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 6px;
+    background-color: rgb(141, 139, 139);
+    margin-top: 10px;
+}
+
+.path {
+    color: floralwhite;
+    font-size: 17px;
+}
+
+.path:hover{
+    color: rgb(7, 5, 0);
+    cursor: pointer;
+}
+
+.newFolder {
+    border: 2px solid black;
+    height: 80px;
+    width: 120px;
+    margin: 11px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgb(231, 204, 254);
+}
+.newTextFile {
+    border: 2px solid black;
+    height: 80px;
+    width: 120px;
+    margin: 11px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fcf7d2;
+}
+.newFolder:hover{
+    transform: scale(1.02);
+}
+.newTextFile:hover{
+    transform: scale(1.02);
+}
+
+.newFolder [action]{
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgb(239, 223, 254);
+    cursor: pointer;
+    margin: 8px;
+    padding: 2px;
+    color: rgb(61, 57, 57);
+    width: 2px;
+}
+
+.newFolder [action]:hover{
+    background-color: rgb(119, 117, 117);
+    color: cornsilk;
+}
+
+.newFolder div[purpose=name]{
+    color: rgb(5, 7, 17);
+    padding-top:44px;
+    font-size: 20px;
+}
+
+.newTextFile [action]{
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #fffce1;
+    cursor: pointer;
+    margin: 8px;
+    padding: 2px;
+    color: rgb(61, 57, 57);
+    width: 2px;
+}
+
+.newTextFile [action]:hover{
+    background-color: rgb(119, 117, 117);
+    color: cornsilk;
+}
+
+.newTextFile div[purpose=name]{
+    color: rgb(5, 7, 17);
+    padding-top:44px;
+    font-size: 20px;
+}
+
+#app {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    border-radius: 12px;
+    height: 64vh;
+    width: 70vw;
+    top: 18%;
+    left: 13%;
+    border: 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.416) 0px 54px 55px, rgba(0, 0, 0, 0.236) 0px -12px 30px,
+    rgba(0, 0, 0, 0.316) 0px 4px 6px, rgba(0, 0, 0, 0.273) 0px 12px 13px, rgba(0, 0, 0, 0.24) 0px -3px 5px;
+}
+
+#app-title-bar {
+    display: flex;
+    background-color: #e4ddedf5;
+    border: 1px solid;
+    height: 40px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+#app-title {
+    width: 96.8%;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    padding-top: 10px;
+    border-right: 2px solid;
+}
+
+#win-actions span{
+    cursor: pointer;
+    margin-left: 3px;
+    padding-top: 8px;
+}
+
+#win-actions span:hover {
+    color: red;
+}
+
+#app-menu-bar {
+    display: flex;
+    background-color: #9AB6B6;
+    height: 40px;
+    border: 1px solid;
+}
+
+#app-body {
+    display: flex;
+    background-color: rgb(219, 144, 46);
+    height: 399.4px;
+    width: 1074px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.notepad-menu {
+    width: 100%;
+    padding: 5px;
+}
+
+.notepad-menu * {
+    margin: 0px 5px;
+    padding: 2px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.notepad-menu span {
+    vertical-align: bottom;
+    border-radius: 5px;
+}
+
+.notepad-menu span:hover {
+    background-color: white;
+    color: teal;
+    border: 2px solid black;
+}
+
+.notepad-menu [pressed=true] {
+    background-color: white;
+    color: teal;
+    border: 2px solid black;
+}
+
+.notepad-menu input[type=color] {
+    width: 30px;
+    margin-bottom: 3px;
+}
+
+.notepad-menu select {
+    height: 22px;
+}
+
+.notepad-menu [purpose=download] {
+    display: none;
+}
+
+.notepad-menu input[action=upload] {
+    display: none;
+}
+
+.notepad-body {
+    height: 100%;
+    width: 100%;
+}
+
+.notepad-body textarea{
+    height: 98.2%;
+    width: 99.59%;
+    resize: none;
+    outline: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#overlay {
+    display: none;
+    background-color: #8d8b8b7b;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0%;
+    left: 0%;
+}
